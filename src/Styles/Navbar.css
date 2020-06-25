@@ -1,0 +1,21 @@
+/*NAVBAR*/
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.brand-name {
+  text-align: center;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.sep {
+  width: 150px;
+  background-color: #ce1554;
+  height: 5px;
+  border: none;
+}
