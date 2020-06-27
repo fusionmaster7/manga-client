@@ -1,0 +1,23 @@
+/* CHAPTER READING PAGE */
+.chapter-container {
+  display: flex;
+  padding: 15px;
+  margin: 15px auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+#current-manga {
+  font-size: 16px;
+}
+
+#current-page {
+  font-size: 16px;
+}
+
+.chapter-img-container {
+  display: flex;
+  justify-content: center;
+}

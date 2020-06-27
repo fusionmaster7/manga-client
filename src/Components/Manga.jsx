@@ -9,13 +9,11 @@ const Manga = (props) => {
   const getChapters = async () => {
     const { params } = props.match;
     const res = await axios.get(`http://localhost:5000/manga/${params.manga}`);
-    console.log(res.data);
-    console.log(state.chapters);
+    setState({ chapters: [...res.data.links] });
   };
   useEffect(() => {
     getChapters();
   }, []);
-  const list = [1, 2, 3];
   if (state.chapters == null) {
     return (
       <>
@@ -36,7 +34,7 @@ const Manga = (props) => {
             <img src="https://via.placeholder.com/200" />
           </div>
           <div className="chapter-list">
-            {list.map((e, i) => {
+            {state.chapters.map((e, i) => {
               return <div className="chapter">{`Chapter ${i + 1}`}</div>;
             })}
           </div>
